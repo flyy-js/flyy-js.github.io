@@ -151,7 +151,7 @@ Retrieves the value for a key and then removes that key from the bucket.
 
 ```javascript
 const userAge = user.take('age');
-console.log(userAge); // 30
+console.log(userAge); // 19
 console.log(user.has('age')); // false
 ```
 
@@ -505,3 +505,4 @@ Flyy.js is licensed under the **MIT License**
 
 
 Copyright © 2025 amazou.
+
