@@ -1,5 +1,3 @@
-<h1> Flyy.js </h1>
-
 **A lightweight JavaScript library designed to simplify data management.**
 
 Flyy provides flexible structures for handling objects, lists, and collections—making it easier to organize, manipulate, and control your data with clarity and precision. It's simple, intuitive, and has no dependencies.
@@ -505,4 +503,5 @@ Flyy.js is licensed under the **MIT License**
 
 
 Copyright © 2025 amazou.
+
 
