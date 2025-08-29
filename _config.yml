@@ -5,5 +5,3 @@ url: "https://github.com/flyy-js/flyy"
 author:
   name: "Amine Amazou"
   twitter: u0s34
-plugins:
-  - jekyll-seo-tag
