@@ -230,21 +230,21 @@ scores.put([15, 20], 1); // [10, 15, 20, 25, 40, 50]
 tags.put('vue'); // The intake function runs: ['REACT', 'JS', 'VUE']
 ```
 
-**`.cut(picker, much = 1)`**
+**`.cut(cutter, much = 1)`**
 
 Removes entries.
 
-- **Number picker**: `cut(index, howMany)` - Removes items starting from an index.
+- **Number cutter**: `cut(index, howMany)` - Removes items starting from an index.
 
-- **Function picker**: `cut(filterFunction)` - Removes all items that do not match the filter (it keeps matching items).
+- **Function cutter**: `cut(filterFunction)` - Removes all items that match the filter.
 
 ```javascript
 const items = Flyy.brigade(['a', 'b', 'c', 'd']);
 items.cut(1, 2); // Removes 'b' and 'c' -> ['a', 'd']
 
 const numbers = Flyy.brigade([1, 2, 3, 4, 5]);
-// Keep only even numbers
-numbers.cut(num => num % 2 === 0);
+// Remove odd numbers
+numbers.cut(num => num % 2 !== 0);
 console.log(numbers.all()); // [2, 4]
 ```
 
