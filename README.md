@@ -134,6 +134,22 @@ user.put({ country: 'Morocco', status: 'active' });
 console.log(user.all()); // { name: 'Aya', age: 19, isVerified: true, country: 'Morocco', status: 'active' }
 ```
 
+**`.touch(key, value) | .touch({ key: value, ... })`**
+
+Updates the value of an **existing** key. If the key doesn't exist, it adds it. This is useful for ensuring you only modify keys you expect to be there.
+
+```javascript
+const product = Flyy.bucket({ name: 'Laptop', stock: 10 });
+
+// Update existing stock
+product.touch('stock', 9);
+
+// Add a new property
+product.touch('price', 1200);
+
+console.log(product.all()); // { name: 'Laptop', stock: 9, price: 1200 }
+```
+
 **`.cut(key | keyArray)`**
 
 Removes one or more items from the bucket by their key.
@@ -151,22 +167,6 @@ Retrieves the value for a key and then removes that key from the bucket.
 const userAge = user.take('age');
 console.log(userAge); // 19
 console.log(user.has('age')); // false
-```
-
-**`.touch(key, value) | .touch({ key: value, ... })`**
-
-Updates the value of an **existing** key. If the key doesn't exist, it adds it. This is useful for ensuring you only modify keys you expect to be there.
-
-```javascript
-const product = Flyy.bucket({ name: 'Laptop', stock: 10 });
-
-// Update existing stock
-product.touch('stock', 9);
-
-// Add a new property
-product.touch('price', 1200);
-
-console.log(product.all()); // { name: 'Laptop', stock: 9, price: 1200 }
 ```
 
 **`.erase()`**
