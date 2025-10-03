@@ -153,15 +153,6 @@ console.log(userAge); // 19
 console.log(user.has('age')); // false
 ```
 
-**`.erase()`**
-
-Clears all items from the bucket.
-
-```javascript
-user.erase();
-console.log(user.all()); // {}
-```
-
 **`.touch(key, value) | .touch({ key: value, ... })`**
 
 Updates the value of an **existing** key. If the key doesn't exist, it adds it. This is useful for ensuring you only modify keys you expect to be there.
@@ -176,6 +167,15 @@ product.touch('stock', 9);
 product.touch('price', 1200);
 
 console.log(product.all()); // { name: 'Laptop', stock: 9, price: 1200 }
+```
+
+**`.erase()`**
+
+Clears all items from the bucket.
+
+```javascript
+user.erase();
+console.log(user.all()); // {}
 ```
 
 ---
