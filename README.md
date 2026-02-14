@@ -300,6 +300,26 @@ prices.size(); // 4
 prices.count(price => price > 50); // 2
 ```
 
+**`.sort(order = 'ASC')`**
+
+Sorts the entries in ascending (`'ASC'`) or descending (`'DESC'`) order.
+
+```javascript
+const prices = Flyy.brigade([199, 49, 249]);
+prices.sort(); // [49, 199, 249] // default is ASC
+prices.sort('DESC'); // [249, 199, 49]
+```
+
+**`.shuffle()`**
+
+Randomizes the order of entries.
+
+```javascript
+const numbers = Flyy.brigade([1, 3, 5, 7, 9]);
+numbers.shuffle(); // [3, 5, 7, 1, 9]
+numbers.shuffle(); // [7, 9, 5, 3, 1]
+```
+
 **`.first(otherwise)` & `.last(otherwise)`**
 
 Gets the first or last entry. If the brigade is empty, it returns the `otherwise` value.
